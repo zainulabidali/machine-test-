@@ -308,7 +308,7 @@ Future<void> downloadImage(String imageUrl, BuildContext context) async {
                                 downloadImage(imageUrls[index], context);
                               },
                               child: card(
-                                imageUrls[index],
+                                imageUrls.reversed.toList()[index],
                                 'Mens White Plumeria ${index + 1}',
                                 Icons.more_horiz,
                                 250,
@@ -335,9 +335,9 @@ Future<void> downloadImage(String imageUrl, BuildContext context) async {
                       borderRadius: BorderRadius.circular(30),
                       color: Colors.white,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
+                      children: [
                         Icon(Icons.home, size: 30, color: Colors.red),
                         Icon(Icons.search, size: 30, color: Colors.grey),
                         Icon(Icons.notifications, size: 30, color: Colors.grey),
